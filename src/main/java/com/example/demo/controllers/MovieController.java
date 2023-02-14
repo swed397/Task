@@ -5,7 +5,6 @@ import com.example.demo.dtos.MovieDto;
 import com.example.demo.entities.Movie;
 import com.example.demo.mappers.MovieMapper;
 import com.example.demo.services.MovieService;
-import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +18,6 @@ import java.util.stream.Collectors;
 @Slf4j
 @RestController
 @RequestMapping()
-@Api
 public class MovieController {
 
     public final MovieService service;
@@ -34,26 +32,53 @@ public class MovieController {
 
     @PostMapping("/add")
     public ResponseEntity save(@RequestBody @Valid MovieCrateDto movieCrateDto) {
+        log.info("Saving new movie ...");
         Movie movie = service.save(movieMapper.toEntity(movieCrateDto));
-
         return ResponseEntity.ok(movieMapper.toDto(movie));
     }
 
     @PostMapping("/addAll")
     public ResponseEntity saveAll(@RequestBody @Valid MovieCrateDto[] movieCrateDtos) {
-
+        log.info("Saving new list of movie, size of : " + movieCrateDtos.length);
         Arrays.stream(movieCrateDtos).forEach(o -> {
                     Movie movie = movieMapper.toEntity(o);
                     service.save(movie);
                 }
         );
 
+        log.info("Saving list of movies");
+
         return ResponseEntity.ok().build();
     }
 
     @GetMapping("/findByName{name}")
     public ResponseEntity<List<MovieDto>> findById(@PathVariable String name) {
+        log.info("Getting movies by name : " + name);
         return ResponseEntity.ok(service.findAllByName(name).stream()
+                .map(movieMapper::toDto)
+                .collect(Collectors.toList()));
+    }
+
+    @GetMapping("/findByType{type}")
+    public ResponseEntity<List<MovieDto>> findByType(@PathVariable String type) {
+        log.info("Getting movies by type : " + type);
+        return ResponseEntity.ok(service.findAllByType(type).stream()
+                .map(movieMapper::toDto)
+                .collect(Collectors.toList()));
+    }
+
+    @GetMapping("/findByYear{year}")
+    public ResponseEntity<List<MovieDto>> findByYear(@PathVariable Integer year) {
+        log.info("Getting movies by year : " + year);
+        return ResponseEntity.ok(service.findAllByYear(year).stream()
+                .map(movieMapper::toDto)
+                .collect(Collectors.toList()));
+    }
+
+    @GetMapping("/getAll")
+    public ResponseEntity<List<MovieDto>> findAll() {
+        log.info("Get all movies");
+        return ResponseEntity.ok(service.findAll().stream()
                 .map(movieMapper::toDto)
                 .collect(Collectors.toList()));
     }
