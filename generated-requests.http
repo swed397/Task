@@ -1,0 +1,54 @@
+###
+###
+POST http://localhost:8080/movie-api/v1/add
+Content-Type: application/json
+
+{
+  "name": "TEST2",
+  "comment" : "test",
+  "type" : "Сериал",
+  "genre" : "test",
+  "date" : "2018-05-10"
+}
+
+<> 2023-02-14T172956.200.json
+
+###
+POST http://localhost:8080/movie-api/v1/addAll
+Content-Type: application/json
+
+[
+  {
+    "name": "TEST1",
+    "comment": "test",
+    "type": "Сериал",
+    "genre": "test",
+    "date": "2018-05-10"
+  },
+  {
+    "name": "TEST2",
+    "comment": "test",
+    "type": "Полнометражный",
+    "genre": "test",
+    "date": "2018-05-10"
+  },
+  {
+    "name": "TEST3",
+    "comment": "test",
+    "type": "Короткометражный",
+    "genre": "test",
+    "date": "2018-05-10"
+  }
+]
+
+###
+GET http://localhost:8080/movie-api/v1/findByYear2018
+
+###
+GET http://localhost:8080/movie-api/v1/findByTypetest
+
+###
+GET http://localhost:8080/movie-api/v1/getAll
+
+###
+GET http://localhost:8080/movie-api/v1/findByNametest
