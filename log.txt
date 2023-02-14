@@ -1,0 +1,161 @@
+2023-02-14 18:20:56.698  INFO 14732 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication using Java 18.0.2.1 on WIN-DGJ5JI5HF7H with PID 14732 (E:\proj\sber-task\target\classes started by User in E:\proj\sber-task)
+2023-02-14 18:20:56.702  INFO 14732 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-02-14 18:20:59.551  INFO 14732 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-14 18:20:59.649  INFO 14732 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 2 JPA repository interfaces.
+2023-02-14 18:21:00.905  INFO 14732 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-14 18:21:00.925  INFO 14732 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-14 18:21:00.926  INFO 14732 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-02-14 18:21:01.287  INFO 14732 --- [main] o.a.c.c.C.[.[localhost].[/movie-api/v1]  : Initializing Spring embedded WebApplicationContext
+2023-02-14 18:21:01.288  INFO 14732 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4485 ms
+2023-02-14 18:21:01.541  INFO 14732 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-14 18:21:01.951  INFO 14732 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-14 18:21:01.975  INFO 14732 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:sberdb'
+2023-02-14 18:21:02.174  INFO 14732 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2023-02-14 18:21:02.174  INFO 14732 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-02-14 18:21:02.175  INFO 14732 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-02-14 18:21:02.196  INFO 14732 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:sberdb (H2 2.1)
+2023-02-14 18:21:02.256  WARN 14732 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2023-02-14 18:21:02.281  INFO 14732 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.014s)
+2023-02-14 18:21:02.288  INFO 14732 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-02-14 18:21:02.312  INFO 14732 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-02-14 18:21:02.316  INFO 14732 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.0 - create schema and table"
+2023-02-14 18:21:02.329  INFO 14732 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2.0 - create movie type table"
+2023-02-14 18:21:02.335  INFO 14732 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2.0 (execution time 00:00.026s)
+2023-02-14 18:21:02.415  INFO 14732 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-14 18:21:02.476  INFO 14732 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-02-14 18:21:02.635  INFO 14732 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-14 18:21:02.741  INFO 14732 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-02-14 18:21:03.255  INFO 14732 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-14 18:21:03.262  INFO 14732 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-14 18:21:03.721  WARN 14732 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-14 18:21:04.534  INFO 14732 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-02-14 18:21:04.582  INFO 14732 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/movie-api/v1'
+2023-02-14 18:21:04.598  INFO 14732 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 8.529 seconds (JVM running for 9.504)
+2023-02-14 18:21:04.755  INFO 14732 --- [RMI TCP Connection(1)-25.9.26.140] o.a.c.c.C.[.[localhost].[/movie-api/v1]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 18:21:04.756  INFO 14732 --- [RMI TCP Connection(1)-25.9.26.140] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-14 18:21:04.759  INFO 14732 --- [RMI TCP Connection(1)-25.9.26.140] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-02-14 18:21:13.386  INFO 14732 --- [http-nio-8080-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 185 ms
+2023-02-14 18:22:13.486  INFO 14732 --- [http-nio-8080-exec-2] c.e.demo.controllers.MovieController     : Get all movies
+2023-02-14 18:50:19.864  INFO 6500 --- [main] c.e.demo.services.MovieServiceTest       : Starting MovieServiceTest using Java 18.0.2.1 on WIN-DGJ5JI5HF7H with PID 6500 (started by User in E:\proj\sber-task)
+2023-02-14 18:50:19.866  INFO 6500 --- [main] c.e.demo.services.MovieServiceTest       : No active profile set, falling back to 1 default profile: "default"
+2023-02-14 18:50:21.059  INFO 6500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-14 18:50:21.125  INFO 6500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 2 JPA repository interfaces.
+2023-02-14 18:50:22.402  INFO 6500 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2023-02-14 18:50:22.402  INFO 6500 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-02-14 18:50:22.402  INFO 6500 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-02-14 18:50:22.411  INFO 6500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-14 18:50:22.616  INFO 6500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-14 18:50:22.628  INFO 6500 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:sberdb (H2 2.1)
+2023-02-14 18:50:22.664  WARN 6500 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2023-02-14 18:50:22.684  INFO 6500 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.011s)
+2023-02-14 18:50:22.690  INFO 6500 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-02-14 18:50:22.713  INFO 6500 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-02-14 18:50:22.718  INFO 6500 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.0 - create schema and table"
+2023-02-14 18:50:22.732  INFO 6500 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2.0 - create movie type table"
+2023-02-14 18:50:22.737  INFO 6500 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2.0 (execution time 00:00.025s)
+2023-02-14 18:50:22.935  INFO 6500 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-14 18:50:22.997  INFO 6500 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-02-14 18:50:23.045  INFO 6500 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-14 18:50:23.185  INFO 6500 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-02-14 18:50:23.596  INFO 6500 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-14 18:50:23.604  INFO 6500 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-14 18:50:24.167  WARN 6500 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-14 18:50:25.899  INFO 6500 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:sberdb'
+2023-02-14 18:50:25.936  INFO 6500 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-02-14 18:50:25.994  INFO 6500 --- [main] c.e.demo.services.MovieServiceTest       : Started MovieServiceTest in 6.51 seconds (JVM running for 10.733)
+2023-02-14 18:50:26.174  INFO 6500 --- [main] com.example.demo.services.MovieService   : Successfully saved new movie
+2023-02-14 18:50:26.204  INFO 6500 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-14 18:50:26.207  INFO 6500 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-14 18:50:26.209  INFO 6500 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-14 18:54:44.260  INFO 12036 --- [main] c.e.demo.services.MovieServiceTest       : Starting MovieServiceTest using Java 18.0.2.1 on WIN-DGJ5JI5HF7H with PID 12036 (started by User in E:\proj\sber-task)
+2023-02-14 18:54:44.263  INFO 12036 --- [main] c.e.demo.services.MovieServiceTest       : No active profile set, falling back to 1 default profile: "default"
+2023-02-14 18:54:45.593  INFO 12036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-14 18:54:45.657  INFO 12036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 2 JPA repository interfaces.
+2023-02-14 18:54:46.987  INFO 12036 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2023-02-14 18:54:46.988  INFO 12036 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-02-14 18:54:46.988  INFO 12036 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-02-14 18:54:47.004  INFO 12036 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-14 18:54:47.291  INFO 12036 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-14 18:54:47.301  INFO 12036 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:sberdb (H2 2.1)
+2023-02-14 18:54:47.335  WARN 12036 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2023-02-14 18:54:47.355  INFO 12036 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.010s)
+2023-02-14 18:54:47.361  INFO 12036 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-02-14 18:54:47.387  INFO 12036 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-02-14 18:54:47.391  INFO 12036 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.0 - create schema and table"
+2023-02-14 18:54:47.405  INFO 12036 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2.0 - create movie type table"
+2023-02-14 18:54:47.410  INFO 12036 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2.0 (execution time 00:00.025s)
+2023-02-14 18:54:47.568  INFO 12036 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-14 18:54:47.634  INFO 12036 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-02-14 18:54:47.686  INFO 12036 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-14 18:54:47.813  INFO 12036 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-02-14 18:54:48.224  INFO 12036 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-14 18:54:48.231  INFO 12036 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-14 18:54:48.915  WARN 12036 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-14 18:54:50.748  INFO 12036 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:sberdb'
+2023-02-14 18:54:50.803  INFO 12036 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-02-14 18:54:50.871  INFO 12036 --- [main] c.e.demo.services.MovieServiceTest       : Started MovieServiceTest in 6.949 seconds (JVM running for 8.203)
+2023-02-14 18:54:50.999  INFO 12036 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-14 18:54:51.003  INFO 12036 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-14 18:54:51.005  INFO 12036 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-14 18:56:08.985  INFO 20144 --- [main] c.e.demo.services.MovieServiceTest       : Starting MovieServiceTest using Java 18.0.2.1 on WIN-DGJ5JI5HF7H with PID 20144 (started by User in E:\proj\sber-task)
+2023-02-14 18:56:08.986  INFO 20144 --- [main] c.e.demo.services.MovieServiceTest       : No active profile set, falling back to 1 default profile: "default"
+2023-02-14 18:56:10.097  INFO 20144 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-14 18:56:10.144  INFO 20144 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 2 JPA repository interfaces.
+2023-02-14 18:56:11.330  INFO 20144 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2023-02-14 18:56:11.330  INFO 20144 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-02-14 18:56:11.330  INFO 20144 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-02-14 18:56:11.339  INFO 20144 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-14 18:56:11.556  INFO 20144 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-14 18:56:11.567  INFO 20144 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:sberdb (H2 2.1)
+2023-02-14 18:56:11.601  WARN 20144 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2023-02-14 18:56:11.624  INFO 20144 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.011s)
+2023-02-14 18:56:11.631  INFO 20144 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-02-14 18:56:11.657  INFO 20144 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-02-14 18:56:11.663  INFO 20144 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.0 - create schema and table"
+2023-02-14 18:56:11.680  INFO 20144 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2.0 - create movie type table"
+2023-02-14 18:56:11.686  INFO 20144 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2.0 (execution time 00:00.031s)
+2023-02-14 18:56:11.853  INFO 20144 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-14 18:56:11.915  INFO 20144 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-02-14 18:56:11.953  INFO 20144 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-14 18:56:12.101  INFO 20144 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-02-14 18:56:12.492  INFO 20144 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-14 18:56:12.500  INFO 20144 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-14 18:56:13.098  WARN 20144 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-14 18:56:14.913  INFO 20144 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:sberdb'
+2023-02-14 18:56:14.951  INFO 20144 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-02-14 18:56:15.020  INFO 20144 --- [main] c.e.demo.services.MovieServiceTest       : Started MovieServiceTest in 6.365 seconds (JVM running for 7.539)
+2023-02-14 18:56:15.152  INFO 20144 --- [main] com.example.demo.services.MovieService   : Successfully saved new movie
+2023-02-14 18:56:15.225  INFO 20144 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-14 18:56:15.230  INFO 20144 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-14 18:56:15.234  INFO 20144 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-14 18:57:28.136  INFO 15532 --- [main] c.e.demo.services.MovieServiceTest       : Starting MovieServiceTest using Java 18.0.2.1 on WIN-DGJ5JI5HF7H with PID 15532 (started by User in E:\proj\sber-task)
+2023-02-14 18:57:28.138  INFO 15532 --- [main] c.e.demo.services.MovieServiceTest       : No active profile set, falling back to 1 default profile: "default"
+2023-02-14 18:57:29.284  INFO 15532 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-14 18:57:29.336  INFO 15532 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 2 JPA repository interfaces.
+2023-02-14 18:57:30.557  INFO 15532 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2023-02-14 18:57:30.558  INFO 15532 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-02-14 18:57:30.558  INFO 15532 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-02-14 18:57:30.568  INFO 15532 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-14 18:57:30.788  INFO 15532 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-14 18:57:30.799  INFO 15532 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:sberdb (H2 2.1)
+2023-02-14 18:57:30.833  WARN 15532 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2023-02-14 18:57:30.855  INFO 15532 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.012s)
+2023-02-14 18:57:30.860  INFO 15532 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-02-14 18:57:30.883  INFO 15532 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-02-14 18:57:30.888  INFO 15532 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.0 - create schema and table"
+2023-02-14 18:57:30.902  INFO 15532 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2.0 - create movie type table"
+2023-02-14 18:57:30.907  INFO 15532 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2.0 (execution time 00:00.027s)
+2023-02-14 18:57:31.068  INFO 15532 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-14 18:57:31.148  INFO 15532 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-02-14 18:57:31.208  INFO 15532 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-14 18:57:31.360  INFO 15532 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-02-14 18:57:31.787  INFO 15532 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-14 18:57:31.795  INFO 15532 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-14 18:57:32.351  WARN 15532 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-14 18:57:34.112  INFO 15532 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:sberdb'
+2023-02-14 18:57:34.164  INFO 15532 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-02-14 18:57:34.223  INFO 15532 --- [main] c.e.demo.services.MovieServiceTest       : Started MovieServiceTest in 6.391 seconds (JVM running for 7.575)
+2023-02-14 18:57:34.350  INFO 15532 --- [main] com.example.demo.services.MovieService   : Successfully saved new movie
+2023-02-14 18:57:34.410  INFO 15532 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-14 18:57:34.413  INFO 15532 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-14 18:57:34.415  INFO 15532 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
