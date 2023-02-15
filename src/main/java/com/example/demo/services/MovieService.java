@@ -2,6 +2,7 @@ package com.example.demo.services;
 
 import com.example.demo.entities.Movie;
 import com.example.demo.repositories.MovieRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,10 +11,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+@Slf4j
 @Service
 @Transactional(readOnly = true)
 public class MovieService {
-    private static final Logger logger = LoggerFactory.getLogger(MovieService.class);
 
     public final MovieRepository repository;
 
@@ -26,7 +27,7 @@ public class MovieService {
     public Movie save(Movie movie) {
         Movie savedMovie = repository.save(movie);
         if (savedMovie.getId() != null) {
-            logger.info("Successfully saved new movie");
+            log.info("Successfully saved new movie");
         }
         return repository.save(movie);
     }
