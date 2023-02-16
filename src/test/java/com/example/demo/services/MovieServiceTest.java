@@ -1,6 +1,7 @@
 package com.example.demo.services;
 
 import com.example.demo.entities.Movie;
+import com.example.demo.entities.MovieType;
 import com.example.demo.repositories.MovieRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -30,7 +31,7 @@ class MovieServiceTest {
     public void setUp() {
         Mockito.when(movieRepository.save(Mockito.any(Movie.class)))
                 .thenReturn(new Movie(1L, "Test film",
-                        "TEST", "TEST", "TEST", LocalDate.now()));
+                        "TEST", new MovieType(), "TEST", LocalDate.now()));
 
         Mockito.when(movieRepository.findAll())
                 .thenReturn(Arrays.asList(new Movie(), new Movie(), new Movie()));

@@ -19,7 +19,6 @@ public class MovieTypeValidator implements ConstraintValidator<ValidateMovieType
 
     @Override
     public boolean isValid(String type, ConstraintValidatorContext constraintValidatorContext) {
-
         return service.checkMovieTypeExisting(type.toLowerCase());
     }
 }

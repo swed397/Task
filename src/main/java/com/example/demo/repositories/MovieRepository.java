@@ -13,6 +13,10 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
 
     ArrayList<Movie> findAllByNameContainingIgnoreCase(String name);
 
+    @Query(
+            nativeQuery = true,
+            value = "select * from movies m join movie_type mt on m.movie_type_id = mt.id where mt.name = :#{#type}"
+    )
     ArrayList<Movie> findAllByTypeIgnoreCase(String type);
 
     @Query(

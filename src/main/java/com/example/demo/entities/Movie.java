@@ -27,7 +27,6 @@ public class Movie {
 
     @OneToOne
     @JoinColumn(name = "movie_type_id")
-    @Column(name = "type")
     private MovieType type;
 
     @Column(name = "genre")

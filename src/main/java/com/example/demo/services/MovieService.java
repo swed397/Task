@@ -37,7 +37,10 @@ public class MovieService {
     }
 
     public List<Movie> findAllByType(String type) {
-        return repository.findAllByTypeIgnoreCase(type);
+        if (type == null) {
+            return null;
+        }
+        return repository.findAllByTypeIgnoreCase(type.toLowerCase());
     }
 
     public List<Movie> findAllByYear(Integer year) {

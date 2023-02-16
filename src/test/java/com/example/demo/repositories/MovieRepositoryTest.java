@@ -38,8 +38,8 @@ class MovieRepositoryTest {
         Assertions.assertNotNull(movieArrayList2);
         Assertions.assertEquals(movieArrayList2.size(), 2);
         Assertions.assertEquals(movieArrayList1, movieArrayList2);
-        movieArrayList1.forEach(o -> Assertions.assertEquals(o.getType(), "Сериал"));
-        movieArrayList2.forEach(o -> Assertions.assertEquals(o.getType(), "Сериал"));
+        movieArrayList1.forEach(o -> Assertions.assertEquals(o.getType().getName(), "сериал"));
+        movieArrayList2.forEach(o -> Assertions.assertEquals(o.getType().getName(), "сериал"));
     }
 
     @Test
