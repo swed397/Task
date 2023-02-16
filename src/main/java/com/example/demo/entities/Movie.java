@@ -25,8 +25,10 @@ public class Movie {
     @Column(name = "comment")
     private String comment;
 
+    @OneToOne
+    @JoinColumn(name = "movie_type_id")
     @Column(name = "type")
-    private String type;
+    private MovieType type;
 
     @Column(name = "genre")
     private String genre;

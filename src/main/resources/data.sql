@@ -1,23 +1,23 @@
 insert into movies(name, comment, type, genre, date)
-values ('Терминатор', 'Просто комментарий', 'Полнометражный', 'Боевик', '1984-10-26');
+values ('Терминатор', 'Просто комментарий', '1', 'Боевик', '1984-10-26');
 
 insert into movies(name, comment, type, genre, date)
-values ('Рэмбо', 'Просто комментарий', 'Полнометражный', 'Боевик', '1982-11-10');
+values ('Рэмбо', 'Просто комментарий', '1', 'Боевик', '1982-11-10');
 
 insert into movies(name, comment, type, genre, date)
-values ('Трансформеры', 'Просто комментарий', 'Полнометражный', 'Боевик', '2007-06-04');
+values ('Трансформеры', 'Просто комментарий', '1', 'Боевик', '2007-06-04');
 
 insert into movies(name, comment, type, genre, date)
-values ('Наваждение', 'Просто комментарий', 'Короткометражный', 'Научный', '1965-01-04');
+values ('Наваждение', 'Просто комментарий', '2', 'Научный', '1965-01-04');
 
 insert into movies(name, comment, type, genre, date)
-values ('Пила', 'Просто комментарий', 'Короткометражный', 'Ужасы', '2003-07-01');
+values ('Пила', 'Просто комментарий', '2', 'Ужасы', '2003-07-01');
 
 insert into movies(name, comment, type, genre, date)
-values ('Уэнсдей', 'Просто комментарий', 'Сериал', 'Комедия', '2022-09-22');
+values ('Уэнсдей', 'Просто комментарий', '3', 'Комедия', '2022-09-22');
 
 insert into movies(name, comment, type, genre, date)
-values ('Тьма', 'Просто комментарий', 'Сериал', 'Ужасы', '2017-09-22');
+values ('Тьма', 'Просто комментарий', '3', 'Ужасы', '2017-09-22');
 
 insert into movies(name, comment, type, genre, date)
-values ('TEST', 'TEST', 'TEST', 'TEST', '2018-10-10');
+values ('TEST', 'TEST', '3', 'TEST', '2018-10-10');
