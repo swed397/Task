@@ -4,7 +4,7 @@ POST http://localhost:8080/movie-api/v1/add
 Content-Type: application/json
 
 {
-  "name": "TEST2",
+  "name": "TEST",
   "comment" : "test",
   "type" : "Сериал",
   "genre" : "test",
@@ -52,3 +52,12 @@ GET http://localhost:8080/movie-api/v1/getAll
 
 ###
 GET http://localhost:8080/movie-api/v1/findByNametest
+
+###
+GET http://localhost:8080/movie-api/v1/getAll
+
+###
+GET http://localhost:8080/movie-api/v1/findByTypeСериал
+
+###
+GET http://localhost:8080/movie-api/v1/findByTypeсериал
