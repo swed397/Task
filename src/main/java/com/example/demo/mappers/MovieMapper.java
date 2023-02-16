@@ -20,4 +20,5 @@ public interface MovieMapper {
     private static String typeToStr(MovieType movieType) {
         return movieType.getName();
     }
+
 }
