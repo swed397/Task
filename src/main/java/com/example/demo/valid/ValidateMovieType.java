@@ -10,7 +10,7 @@ import java.lang.annotation.*;
 @Constraint(validatedBy = MovieTypeValidator.class)
 public @interface ValidateMovieType {
 
-    String message() default "";
+    String message() default "Invalid movie type";
 
     Class<?>[] groups() default {};
 
