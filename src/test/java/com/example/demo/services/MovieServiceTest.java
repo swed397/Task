@@ -57,7 +57,7 @@ class MovieServiceTest {
 
     @Test
     void findAllByTypeTest() {
-        ArrayList<Movie> movieArrayList = movieRepository.findAllByTypeIgnoreCase("");
+        ArrayList<Movie> movieArrayList = movieRepository.findAllByType_NameIgnoreCase("");
 
         Assertions.assertNotNull(movieArrayList);
         Assertions.assertEquals(movieArrayList.size(), 0);
@@ -65,7 +65,7 @@ class MovieServiceTest {
 
     @Test
     void findAllByYearTest() {
-        ArrayList<Movie> movieArrayList = movieRepository.findByYear(2018);
+        ArrayList<Movie> movieArrayList = movieRepository.findAllByYear(2018);
 
         Assertions.assertNotNull(movieArrayList);
         Assertions.assertEquals(movieArrayList.size(), 0);

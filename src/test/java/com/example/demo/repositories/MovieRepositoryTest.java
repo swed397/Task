@@ -53,9 +53,9 @@ class MovieRepositoryTest {
 
     @Test
     void findAllTest() {
-        List<Movie> movieList = movieService.findAll();
+        List<Movie> movieList = movieService.findAll(0, 5);
 
         Assertions.assertNotNull(movieList);
-        Assertions.assertEquals(movieList.size(), 8);
+        Assertions.assertEquals(movieList.size(), 5);
     }
 }

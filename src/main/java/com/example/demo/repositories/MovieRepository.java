@@ -3,25 +3,22 @@ package com.example.demo.repositories;
 import com.example.demo.entities.Movie;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 @Repository
-public interface MovieRepository extends JpaRepository<Movie, Long> {
+public interface MovieRepository extends JpaRepository<Movie, Long>, PagingAndSortingRepository<Movie, Long> {
 
     ArrayList<Movie> findAllByNameContainingIgnoreCase(String name);
 
-    @Query(
-            nativeQuery = true,
-            value = "select * from movies m join movie_type mt on m.movie_type_id = mt.id where mt.name = :#{#type}"
-    )
-    ArrayList<Movie> findAllByTypeIgnoreCase(String type);
+    ArrayList<Movie> findAllByType_NameIgnoreCase(String type);
 
     @Query(
-            nativeQuery = true,
-            value = "select * from movies where id in (select id from movies where year(date) = :#{#year})"
+            value = "select m from Movie m where year(m.date) = :#{#year}"
     )
-    ArrayList<Movie> findByYear(@Param("year") Integer year);
+    ArrayList<Movie> findAllByYear(@Param("year") Integer year);
 }

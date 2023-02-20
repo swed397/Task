@@ -11,8 +11,6 @@ Content-Type: application/json
   "date" : "2018-05-10"
 }
 
-<> 2023-02-14T172956.200.json
-
 ###
 POST http://localhost:8080/movie-api/v1/addAll
 Content-Type: application/json
@@ -54,7 +52,7 @@ GET http://localhost:8080/movie-api/v1/getAll
 GET http://localhost:8080/movie-api/v1/findByNametest
 
 ###
-GET http://localhost:8080/movie-api/v1/getAll
+GET http://localhost:8080/movie-api/v1/getAll&&page=0&&size=5
 
 ###
 GET http://localhost:8080/movie-api/v1/findByTypeСериал

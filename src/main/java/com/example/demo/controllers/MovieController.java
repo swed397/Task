@@ -75,10 +75,10 @@ public class MovieController {
                 .collect(Collectors.toList()));
     }
 
-    @GetMapping("/getAll")
-    public ResponseEntity<List<MovieDto>> findAll() {
-        log.info("Get all movies");
-        return ResponseEntity.ok(service.findAll().stream()
+    @GetMapping("/getAll&&page={page}&&size={size}")
+    public ResponseEntity<List<MovieDto>> findAll(@PathVariable int page, @PathVariable int size) {
+        log.info("Get all movies on page " + page);
+        return ResponseEntity.ok(service.findAll(page, size).stream()
                 .map(movieMapper::toDto)
                 .collect(Collectors.toList()));
     }

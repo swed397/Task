@@ -6,9 +6,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Slf4j
@@ -40,14 +42,14 @@ public class MovieService {
         if (type == null) {
             return null;
         }
-        return repository.findAllByTypeIgnoreCase(type.toLowerCase());
+        return repository.findAllByType_NameIgnoreCase(type);
     }
 
     public List<Movie> findAllByYear(Integer year) {
-        return repository.findByYear(year);
+        return repository.findAllByYear(year);
     }
 
-    public List<Movie> findAll() {
-        return repository.findAll();
+    public List<Movie> findAll(int page, int size) {
+        return repository.findAll(PageRequest.of(page, size)).getContent();
     }
 }

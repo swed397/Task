@@ -3,4 +3,4 @@ create table movie_type (
     name varchar not null
 );
 
-insert into movie_type (name) values ('полнометражный'), ('короткометражный'), ('сериал');
+insert into movie_type (name) values ('Полнометражный'), ('Короткометражный'), ('Сериал');

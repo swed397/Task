@@ -5,6 +5,8 @@ import com.example.demo.repositories.MovieTypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MovieTypeService {
 
@@ -16,10 +18,14 @@ public class MovieTypeService {
     }
 
     public boolean checkMovieTypeExisting(String type) {
-        return movieTypeRepository.getByName(type).isPresent();
+        return movieTypeRepository.getByNameIgnoreCase(type).isPresent();
     }
 
     public MovieType findTypeByName(String name) {
-        return movieTypeRepository.getByName(name.toLowerCase()).orElse(new MovieType());
+        return movieTypeRepository.getByNameIgnoreCase(name).orElse(new MovieType());
+    }
+
+    public List<MovieType> findAll() {
+        return movieTypeRepository.findAll();
     }
 }

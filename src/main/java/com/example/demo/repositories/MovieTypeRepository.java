@@ -9,5 +9,5 @@ import java.util.Optional;
 @Repository
 public interface MovieTypeRepository extends JpaRepository<MovieType, Long> {
 
-    Optional<MovieType> getByName(String name);
+    Optional<MovieType> getByNameIgnoreCase(String name);
 }
