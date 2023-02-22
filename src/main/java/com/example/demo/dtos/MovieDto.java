@@ -17,4 +17,16 @@ public class MovieDto {
     private String type;
     private String genre;
     private Date date;
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", comment='" + comment + '\'' +
+                ", type='" + type + '\'' +
+                ", genre='" + genre + '\'' +
+                ", date=" + date +
+                '}';
+    }
 }

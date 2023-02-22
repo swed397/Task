@@ -52,7 +52,7 @@ public class MovieController {
     }
 
     @GetMapping("/findByName{name}")
-    public ResponseEntity<List<MovieDto>> findById(@PathVariable String name) {
+    public ResponseEntity<List<MovieDto>> findByName(@PathVariable String name) {
         log.info("Getting movies by name : " + name);
         return ResponseEntity.ok(service.findAllByName(name).stream()
                 .map(movieMapper::toDto)

@@ -29,4 +29,14 @@ public class MovieCrateDto {
     @NotNull(message = "Date is NOT NULL constraint")
     private LocalDate date;
 
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "name='" + name + '\'' +
+                ", comment='" + comment + '\'' +
+                ", type='" + type + '\'' +
+                ", genre='" + genre + '\'' +
+                ", date=" + date +
+                '}';
+    }
 }

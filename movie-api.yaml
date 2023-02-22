@@ -1,0 +1,172 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+- url: http://localhost:8080/movie-api/v1
+  description: Generated server url
+paths:
+  /add:
+    post:
+      tags:
+      - movie-controller
+      operationId: save
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MovieCrateDto'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /addAll:
+    post:
+      tags:
+      - movie-controller
+      operationId: saveAll
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/MovieCrateDto'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /getAll&&page={page}&&size={size}:
+    get:
+      tags:
+      - movie-controller
+      operationId: findAll
+      parameters:
+      - name: page
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: size
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MovieDto'
+  /findByYear{year}:
+    get:
+      tags:
+      - movie-controller
+      operationId: findByYear
+      parameters:
+      - name: year
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MovieDto'
+  /findByType{type}:
+    get:
+      tags:
+      - movie-controller
+      operationId: findByType
+      parameters:
+      - name: type
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MovieDto'
+  /findByName{name}:
+    get:
+      tags:
+      - movie-controller
+      operationId: findById
+      parameters:
+      - name: name
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MovieDto'
+components:
+  schemas:
+    MovieCrateDto:
+      required:
+      - comment
+      - date
+      - genre
+      - name
+      type: object
+      properties:
+        name:
+          type: string
+        comment:
+          type: string
+        type:
+          type: string
+        genre:
+          type: string
+        date:
+          type: string
+          format: date
+    MovieDto:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        comment:
+          type: string
+        type:
+          type: string
+        genre:
+          type: string
+        date:
+          type: string
+          format: date-time
