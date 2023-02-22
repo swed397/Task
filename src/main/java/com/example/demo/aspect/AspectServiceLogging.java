@@ -31,10 +31,12 @@ public class AspectServiceLogging {
         String className = fullName.substring(fullName.lastIndexOf(".") + 1);
 
         log.info("From AOP. Service " + className + "." + methodName + " method started");
+
         long begin = System.currentTimeMillis();
         Object out = proceedingJoinPoint.proceed();
         long end = System.currentTimeMillis();
         long duration = end - begin;
+
         log.info("From AOP. Service " + className + "." + methodName + " method ended. Duration: " + duration);
 
         return out;
