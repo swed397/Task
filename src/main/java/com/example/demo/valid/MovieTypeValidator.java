@@ -1,7 +1,8 @@
 package com.example.demo.valid;
 
 import com.example.demo.entities.MovieType;
-import com.example.demo.services.MovieTypeService;
+import com.example.demo.services.impl.MovieTypeServiceImpl;
+import com.example.demo.services.interfaces.MovieTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -16,7 +17,7 @@ public class MovieTypeValidator implements ConstraintValidator<ValidateMovieType
 
 
     @Autowired
-    public MovieTypeValidator(MovieTypeService service) {
+    public MovieTypeValidator(MovieTypeServiceImpl service) {
         this.service = service;
     }
 

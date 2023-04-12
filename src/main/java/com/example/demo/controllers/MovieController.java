@@ -1,10 +1,12 @@
 package com.example.demo.controllers;
 
+import com.example.demo.dtos.FiltersDto;
 import com.example.demo.dtos.MovieCrateDto;
 import com.example.demo.dtos.MovieDto;
 import com.example.demo.entities.Movie;
 import com.example.demo.mappers.MovieMapper;
-import com.example.demo.services.MovieService;
+import com.example.demo.services.impl.MovieServiceImp;
+import com.example.demo.services.interfaces.MovieService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +26,7 @@ public class MovieController {
     public final MovieMapper movieMapper;
 
     @Autowired
-    public MovieController(MovieService service, MovieMapper movieMapper) {
+    public MovieController(MovieServiceImp service, MovieMapper movieMapper) {
         this.service = service;
         this.movieMapper = movieMapper;
     }
@@ -75,10 +77,17 @@ public class MovieController {
                 .collect(Collectors.toList()));
     }
 
-    @GetMapping("/getAll&&page={page}&&size={size}")
+    @GetMapping("/getAll?&page={page}&&size={size}")
     public ResponseEntity<List<MovieDto>> findAll(@PathVariable int page, @PathVariable int size) {
         log.info("Get all movies on page " + page);
         return ResponseEntity.ok(service.findAll(page, size).stream()
+                .map(movieMapper::toDto)
+                .collect(Collectors.toList()));
+    }
+
+    @PostMapping("/getByAllParams")
+    public ResponseEntity<List<MovieDto>> findAllByAllParams(@RequestBody FiltersDto filtersDto) {
+        return ResponseEntity.ok(service.findAllByAllParams(filtersDto).stream()
                 .map(movieMapper::toDto)
                 .collect(Collectors.toList()));
     }

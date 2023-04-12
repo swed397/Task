@@ -1,27 +1,27 @@
-package com.example.demo.services;
+package com.example.demo.services.impl;
 
+import com.example.demo.dtos.FiltersDto;
 import com.example.demo.entities.Movie;
 import com.example.demo.repositories.MovieRepository;
+import com.example.demo.services.interfaces.MovieService;
+import com.example.demo.specs.MovieSpec;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDate;
 import java.util.List;
 
 @Slf4j
 @Service
 @Transactional(readOnly = true)
-public class MovieService {
+public class MovieServiceImp implements MovieService {
 
     public final MovieRepository repository;
 
     @Autowired
-    public MovieService(MovieRepository repository) {
+    public MovieServiceImp(MovieRepository repository) {
         this.repository = repository;
     }
 
@@ -51,5 +51,12 @@ public class MovieService {
 
     public List<Movie> findAll(int page, int size) {
         return repository.findAll(PageRequest.of(page, size)).getContent();
+    }
+
+    @Override
+    public List<Movie> findAllByAllParams(FiltersDto filtersDto) {
+        return repository.findAll(MovieSpec.searchWithConditions(
+                        filtersDto.getYear(), filtersDto.getName(), filtersDto.getType()),
+                PageRequest.of(filtersDto.getPage(), filtersDto.getSize())).getContent();
     }
 }

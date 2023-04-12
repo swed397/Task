@@ -1,19 +1,20 @@
-package com.example.demo.services;
+package com.example.demo.services.impl;
 
 import com.example.demo.entities.MovieType;
 import com.example.demo.repositories.MovieTypeRepository;
+import com.example.demo.services.interfaces.MovieTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class MovieTypeService {
+public class MovieTypeServiceImpl implements MovieTypeService {
 
     public final MovieTypeRepository movieTypeRepository;
 
     @Autowired
-    public MovieTypeService(MovieTypeRepository movieTypeRepository) {
+    public MovieTypeServiceImpl(MovieTypeRepository movieTypeRepository) {
         this.movieTypeRepository = movieTypeRepository;
     }
 
