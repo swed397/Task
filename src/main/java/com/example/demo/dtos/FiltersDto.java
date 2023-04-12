@@ -4,17 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.sql.Date;
-
-@Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class MovieDto {
-
-    private Long id;
+@NoArgsConstructor
+@Data
+public class FiltersDto {
+    private Integer year;
     private String name;
-    private String comment;
     private String type;
-    private String genre;
-    private Date date;
+    private Integer page;
+    private Integer size;
 }

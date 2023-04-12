@@ -25,7 +25,7 @@ public class Movie {
     @Column(name = "comment")
     private String comment;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "movie_type_id")
     private MovieType type;
 

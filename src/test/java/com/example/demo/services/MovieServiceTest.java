@@ -3,6 +3,7 @@ package com.example.demo.services;
 import com.example.demo.entities.Movie;
 import com.example.demo.entities.MovieType;
 import com.example.demo.repositories.MovieRepository;
+import com.example.demo.services.interfaces.MovieService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
